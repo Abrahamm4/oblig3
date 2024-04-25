@@ -9,7 +9,7 @@ Github Username: Abrahamm4
 
 Github repo URL: https://github.com/Abrahamm4/oblig3
 
-YouTube video URL: 
+YouTube video URL: https://youtu.be/N7lUDYSuFQI
 
 Short Descriprion: Solution to assignment 3 in the course DATA1700. 
 Users can book tickets and then view all registered tickets for the cinema ordered by lastname.
