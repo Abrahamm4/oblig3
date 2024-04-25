@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kino Billeter</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h1>Cinema tickets </h1>
+      <form class="form">
+
+        <!-- Select film -->
+        <div class="form-group">
+          <label for="velgFilm">Velg film:</label>
+          <select id="velgFilm" class="form-control">
+            <option value="" disabled selected>Velg film</option>
+            <option value="Oppenheimer">Oppenheimer</option>
+            <option value="Dune">Dune</option>
+            <option value="Barbie">Barbie</option>
+            <option value="Fifth Element">Fifth Element</option>
+            <option value="Gravity">Gravity</option>
+          </select>
+          <!-- Error message for film selection -->
+          <div id="filmError" class="error-message text-danger mt-2"></div>
+        </div>
+
+        <!-- Number of tickets -->
+        <div class="form-group">
+          <label for="antall">Antall:</label>
+          <input type="number" id="antall" class="form-control" required>
+          <!-- Error message for the number of tickets -->
+          <div id="antallError" class="error-message text-danger mt-2"></div>
+        </div>
+
+        <!-- First name -->
+        <div class="form-group">
+          <label for="navn">Fornavn:</label>
+          <input type="text" id="navn" class="form-control" required>
+          <!-- Error message for first name -->
+          <div id="navnError" class="error-message text-danger mt-2"></div>
+        </div>
+
+        <!-- Last name -->
+        <div class="form-group">
+          <label for="etterNavn">Etternavn:</label>
+          <input type="text" id="etterNavn" class="form-control" required>
+          <!-- Error message for last name -->
+          <div id="etterNavnError" class="error-message text-danger mt-2"></div>
+        </div>
+
+        <!-- Phone number -->
+        <div class="form-group">
+          <label for="telefon">Telefonnummer:</label>
+          <input type="tel" id="telefon" class="form-control" pattern="[0-9]{8}" placeholder="Eksempel: 12345678"
+                 required>
+          <!-- Error message for phone number -->
+          <div id="telefonError" class="error-message text-danger mt-2"></div>
+        </div>
+
+        <!-- Email address -->
+        <div class="form-group">
+          <label for="epost">E-postadresse:</label>
+          <input type="email" id="epost" class="form-control" required>
+          <!-- Error message for email address -->
+          <div id="epostError" class="error-message text-danger mt-2"></div>
+        </div>
+
+        <!-- Button to purchase ticket -->
+        <button type="button" onclick="kjopBillett()" class="btn btn-primary">Kjøp billett</button>
+
+      </form>
+    </div>
+
+    <div class="col-md-8">
+      <h3>Alle billeter</h3>
+      <div id="billeter" class="table-responsive"></div>
+      <button class="btn btn-danger" onclick="slettAlleBilletter()">Slett alle billeter</button>
+    </div>
+  </div>
+</div>
+<!-- Link the external JavaScript file -->
+<script src="script.js"></script>
+
+</body>
+</html>
